@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <header id="headerwrap" class="backstretched special-max-height">
+    <div class="container vertical-center">
+      <div class="intro-text vertical-center text-left smoothie">
+        <div class="intro-sub-heading wow fadeIn secondary-font"
+          data-wow-delay="0.4s">
+          {% trans %}Here is the list of illustrators I have listed.{% endtrans
+          %}
+          <p>
+            {% trans %}If you find that there is a shortage, please let me know.{% endtrans
+            %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  {% for message in app.flashes('mercuryseries_flashy_notification') %}
+    <script id="flashy-template" type="text/template">
+      <div class="flashy flashy--{{ message.type }}">
+        <a class="flashy__body" href="#" target="_blank"></a>
+      </div>
+    </script>
+    <script>
+      flashy("{{ message.message }}", "{{ message.link }}");
+    </script>
+  {% endfor %}
+  <section>
+    <div class="section-inner">
+      <div class="container js-filter">
+        <div class="zoneSearch">
+          <div class="filtre-pagination">
+            {% include 'include/filtreRecherche.html.twig' %}
+            <div class="row js-filter-sorting">
+              {% include 'illustrateur/filtreIllustrateur.html.twig' %}
+            </div>
+          </div>
+          <div class="grid-illustrateur js-filter-content">
+            {% include 'illustrateur/listeIllustrateurAjax.html.twig' %}
+          </div>
+          <div class="pagination js-filter-pagination">
+            {% include 'illustrateur/paginationIllustrateur.html.twig' %}
+          </div>
+        </div>
+      </div>
+      <script src="{{ asset('build/app.js') }}"></script>
+      {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+      {% endblock %}
+    </div>
+  </section>
+{% endblock %}

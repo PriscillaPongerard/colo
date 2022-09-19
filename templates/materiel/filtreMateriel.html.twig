@@ -1,0 +1,17 @@
+<div class="col-md-offset-1 col-md-2">
+  <p class="filtre-tri">
+    {{ knp_pagination_sortable(materiel, 'Categorie', 'i.nomCategorie') }}
+  </p>
+</div>
+<div class="col-md-offset-2 col-md-1">
+  <p class="filtre-tri">
+    {{
+      knp_pagination_sortable(materiel, 'Nom du Matériel  ', 'p.nomMateriel')
+    }}
+  </p>
+</div>
+<div class="col-md-offset-1 col-md-2">
+  <p class="filtre-tri">
+    {{ knp_pagination_sortable(materiel, 'Marque ', 'p.marque') }}
+  </p>
+</div>

@@ -1,0 +1,10 @@
+  {{ form_start(form, {attr: {class: 'filtre js-filter-form'}})}}
+    <div class="row-filtre">
+      {{ form_widget(form.q ) }} 
+        <button type="submit" class="btn-search ">
+          <img src="{{ asset('img/icons/iconsSearch.png') }}" />
+        </button> 
+    </div> 
+  {{ form_end(form)}}  
+
+ 

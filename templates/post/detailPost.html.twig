@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="post">
+    <div class="row">
+      <div class="col-md-6">
+        <h3><i>{{ post.titreSujet}}</i></h3><br>
+        <h4><u>{% trans %} Post creator {% endtrans %}</u> : {{ post.abonne.username}}</h4> 
+        <h5><u>{% trans %}Category of the post {% endtrans %}</u> :  {{ post.catePost}} {{ post.categorieMat}}{{ post.illustrateur}} {{ post.livre}} </h5>
+        <h5><u>{% trans %} Post date {% endtrans %}</u> : </h5>
+        <h5> {{ post.dateCreation|format_datetime('full', 'none', locale='locale') }} 
+        </h5>
+        <h5><u>{% trans %} Details {% endtrans %}</u> : </h5>
+        <p>{{post.post }}</p>
+        <br>
+      </div>
+      <div class="col-md-6">      
+        <img style="width: inherit; height: inherit; " src="{{ asset("img/photoPost/")}}{{post.photoPost}}"/>
+      </div>  
+      <div class="bouton">
+        <a class="btn-primaryRetour" href="{{ path('reponsePost', {'id': post.id}) }}" style="color: white; ">
+        {% trans %}Reply to the post {% endtrans %}</a>
+        <a class="btn-primaryRetour" href="{{ path('listePost') }}" style="color: white; ">
+        {% trans %}Back to the list of Posts {% endtrans %}</a>                 
+      </div>
+    </div>
+  </div>
+{% endblock %}

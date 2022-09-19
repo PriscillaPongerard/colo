@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <header id="headerwrap" class="backstretched special-max-height">
+    <div class="container vertical-center">
+      <div class="intro-text vertical-center text-left smoothie">
+        <div class="intro-sub-heading wow fadeIn secondary-font"
+          data-wow-delay="0.4s">
+          {% trans %}Here is the list of the material I have listed.{% endtrans %}
+          <p>
+            {% trans %}If you find that there is a shortage, please let me know.{% endtrans
+            %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  {% for message in app.flashes('mercuryseries_flashy_notification') %}
+    <script id="flashy-template" type="text/template">
+      <div class="flashy flashy--{{ message.type }}">
+        <a class="flashy__body" href="#" target="_blank"></a>
+      </div>
+    </script>
+    <script>
+      flashy("{{ message.message }}", "{{ message.link }}");
+    </script>
+  {% endfor %}
+  <section>
+    <div class="section-inner">
+      <div class="container js-filter">
+        <div class="zoneSearch">
+          <div class="filtre-pagination">
+            {% include 'include/filtreRecherche.html.twig' %}
+            <div class="row js-filter-sorting">
+              {% include 'materiel/filtreMateriel.html.twig' %}
+            </div>
+          </div>
+          <div class="grid-livre js-filter-content">
+            {% include 'materiel/listeMaterielAjax.html.twig' %}
+          </div>
+          <div class="pagination js-filter-pagination">
+            {% include 'materiel/paginationMateriel.html.twig' %}
+          </div>
+        </div>
+      </div>
+      {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+      {% endblock %}
+      <script src="{{ asset('build/app.js') }}"></script>
+    </div>
+  </section>
+{% endblock %}

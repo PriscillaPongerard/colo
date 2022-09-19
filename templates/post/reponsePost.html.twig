@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="container-listePost">
+    <div class="message">
+      <h5 class="accueilListe">
+        {% trans %}Answer for the post{% endtrans %}: <strong>{{
+            post.titreSujet
+          }}</strong>
+      </h5>
+    </div>
+    <div class="container">
+      {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="listePost">
+      {% trans %}Write your response for the post here.{% endtrans %}
+    </div>
+  </div>
+{% endblock %}

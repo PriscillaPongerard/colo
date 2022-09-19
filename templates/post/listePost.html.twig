@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <header id="headerwrap" class="backstretched special-max-height">
+    <div class="container vertical-center">
+      <div class="intro-text vertical-center text-left smoothie">
+        <div class="intro-sub-heading wow fadeIn secondary-font"
+          data-wow-delay="0.4s">
+          {% trans %}Welcome to the Post Space.{% endtrans %}
+        </div>
+      </div>
+    </div>
+  </header>
+  {% for message in app.flashes('mercuryseries_flashy_notification') %}
+    <script id="flashy-template" type="text/template">
+      <div class="flashy flashy--{{ message.type }}">
+        <a class="flashy__body" href="#" target="_blank"></a>
+      </div>
+    </script>
+    <script>
+      flashy("{{ message.message }}", "{{ message.link }}");
+    </script>
+  {% endfor %}
+  <section>
+    <div class="section-inner">
+      <div class="container js-filter">
+        <div class="zoneSearch">
+          <div class="filtre-pagination">
+            {# {% include 'include/filtreRecherche.html.twig' %} #}
+            <div class="row js-filter-sorting">
+              <div class="boutonPost">
+                <a class="p-2 text-light" href="{{ path('creationPost') }}">
+                  {% trans %}Add a New Topic{% endtrans %}
+                  <img src="{{ asset('img/icons/iconsAjoutSujet.png') }}" />
+                </a>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    {% trans %}Post creator{% endtrans %}
+                  </th>
+                  <th>
+                    {% trans %}Post title{% endtrans %}
+                  </th>
+                  <th>
+                    {% trans %}Category of the post{% endtrans %}
+                  </th>
+                  <th>
+                    {% trans %}Post date{% endtrans %}
+                  </th>
+                  <th>
+                    {% trans %}Details{% endtrans %}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for pos in post %}
+                  <tr>
+                    <th>
+                      {{ pos.abonne.username }}
+                    </th>
+                    <th>
+                      {{ pos.titreSujet }}
+                    </th>
+                    <th>
+                      {{ pos.catePost }} {{ pos.categorieMat }}{{
+                        pos.illustrateur
+                      }} {{ pos.livre }}
+                    </th>
+                    <th>
+                      {{
+                        pos.dateCreation|format_datetime(
+                          'full',
+                          'none',
+                          locale = 'fr'
+                        )
+                      }}
+                    </th>
+                    <th>
+                      <a href="{{
+                        path(
+                          'detailPost',
+                          {
+                            id: pos.id
+                          }
+                        )
+                        }} ">
+                        {% trans %}Details{% endtrans %}
+                      </a>
+                    </th>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

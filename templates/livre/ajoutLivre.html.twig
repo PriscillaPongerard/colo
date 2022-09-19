@@ -1,0 +1,159 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <section class="dark-wrapper opaqued parallax"
+    data-parallax="scroll"
+    data-image-src="{{ asset('img/banniere.png') }}"
+    data-speed="0.7">
+    <div class="section-inner pad-top-200">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mt30 wow text-center">
+            <h2 class="section-heading">
+             {% trans %} Adding a Book {% endtrans %}
+             </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="welcome">
+    <div class="section-inner-illustrateur">
+      {{ form_start(registerForm) }}
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.titreLivre) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.titreLivre) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Book title :{% endtrans %}</label>
+          {{ form_widget(registerForm.titreLivre) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.illustrateur) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.illustrateur) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Illustrator :{% endtrans %}</label>
+          {{ form_widget(registerForm.illustrateur) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.dateSorti) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.dateSorti) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Release date :{% endtrans %}</label>
+          {{ form_widget(registerForm.dateSorti) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.nbrPages) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.nbrPages) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Page numbers :{% endtrans %}</label>
+          {{ form_widget(registerForm.nbrPages) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.categorieMateriel) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.categorieMateriel) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Categorie :{% endtrans %}</label>
+          {{ form_widget(registerForm.categorieMateriel) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.lienPresentation) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.lienPresentation) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Presentation link :{% endtrans %}</label>
+          {{ form_widget(registerForm.lienPresentation) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.lienPourAcheter) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.lienPourAcheter) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Link to buy:{% endtrans %}</label>
+          {{ form_widget(registerForm.lienPourAcheter) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(registerForm.couvertureLivre) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(registerForm.couvertureLivre) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Book cover :{% endtrans %}</label>
+          {{ form_widget(registerForm.couvertureLivre) }}
+        </div>
+      </div>
+      <div class="container-bouton text-center btnValidation">
+        <button type="submit" class="btn btn-primary">
+          <span class="outline-text">{% trans %}Save{% endtrans %}</span>
+        </button>
+          &#160; &#160; &#160; &#160;
+       <button class="btn-primary">
+          <span class="outline-text">
+            <a style="color: black" href="{{ path('accueil') }}">
+              {% trans %}Back{% endtrans %}
+            </a>
+          </span>
+        </button>
+      </div>
+      {{ form_end(registerForm) }}
+    </div>
+  </section>
+{% endblock %}

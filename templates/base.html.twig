@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<link rel="shortcut icon" href="{{ asset('img/Nlogo.png') }}"/>
+	
+
+		<title>
+			{% block title %}
+				L'atelier Colo
+			{% endblock %}
+		</title>
+
+		<link href="{{ asset('kompleet/css/bootstrap.min.css') }}" rel="stylesheet"/>
+		<link href="{{ asset('kompleet/css/animate.css') }}" rel="stylesheet"/>
+		<link href="{{ asset('kompleet/css/plugins.css') }}" rel="stylesheet"/>
+		<link href="{{ asset('kompleet/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet"/>
+		<link href="{{ asset('kompleet/css/style.css') }}" rel="stylesheet"/> {% block stylesheets %}{% endblock %}
+		<script src="js/func.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		{% include 'include/menu.html.twig' %}
+		{% for label, messages in app.flashes %}
+			{% for message in messages %}
+				<div class="alert alert-{{ label }}">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endfor %}
+		{% block body %}{% endblock %}
+
+		<script src="{{ asset('build/app.js') }}"></script>
+
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+
+	</body>
+	<footer>
+		{% include 'include/piedDePage.html.twig' %}
+	</footer>
+</html>

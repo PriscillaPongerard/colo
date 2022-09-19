@@ -1,0 +1,70 @@
+{% for illu in illustrateur %}
+  <div class="card">
+    <div class="container-logoIllustrateur">
+      <img style="width: inherit; height: 120px"
+        src="{{ asset('img/logoIllustrateur/') }}{{ illu.logo }}"
+        class="card-img" />
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ illu.prenom }} {{ illu.nomIllustrateur }}
+      </h5>
+      <h6 class="card-text">
+        <a href="{{
+          path(
+            'listeLivre.id',
+            {
+              id: illu.id
+            }
+          )
+          }}">
+          <img src="{{ asset('img/icons/icons8-book-20.png') }}" />{% trans
+          %} &nbsp; Illustrator's book{% endtrans %}
+        </a>
+      </h6>
+      <h6 class="card-text" style="text-decoration: underline">
+        {% trans %}Network links:{% endtrans %}
+      </h6>
+      {% if illu.liensite %}
+        <h6 class="card-text">
+          <a href="{{ illu.liensite }}" target="_blank">
+            <img style="width: 60px; height: 60px"
+              src="{{ asset('img/lien.site.png') }}"
+              alt="logoSite" />
+          </a>
+        </h6>
+      {% else %}
+        <h6 class="card-text">
+          <a style="pointer-events: none"
+            href="{{ illu.liensite }}"
+            target="_blank">
+            <img style="width: 60px; height: 60px"
+              src="{{ asset('img/liendisable.png') }}"
+              alt="logoSite" />
+          </a>
+        </h6>
+      {% endif %}
+      <h6 class="card-text">
+        <a href="{{ illu.lienFacebook }}" target="_blank">
+          <img style="width: 60px; height: 60px"
+            src="{{ asset('img/logoFacebook.png') }}"
+            alt="logoFacebook" />
+        </a>
+      </h6>
+      <h6 class="card-text">
+        <a href="{{ illu.lienInsta }}" target="_blank">
+          <img style="width: 60px; height: 60px"
+            src="{{ asset('img/insta-logo.jpg') }}"
+            alt="logoInsta" />
+        </a>
+      </h6>
+      <h6 class="card-text">
+        <a href="{{ illu.chaineYoutube }}" target="_blank">
+          <img style="width: 60px; height: 60px"
+            src="{{ asset('img/logoYoutube.png') }}"
+            alt="logoYoutube" />
+        </a>
+      </h6>
+    </div>
+  </div>
+{% endfor %}

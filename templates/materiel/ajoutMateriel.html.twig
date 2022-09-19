@@ -1,0 +1,146 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="ajoutMateriel">
+    {{ form_start(registerForm) }}
+    <div class="container">
+      <h4>
+        {% trans %}Add Material :{% endtrans %}
+      </h4>
+      <div class="container">
+        {% if form_errors(registerForm.nomMateriel) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.nomMateriel) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Name of Material :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.nomMateriel) }}
+          </div>
+        </div>
+        {% if form_errors(registerForm.marque) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.marque) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Brand :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.marque) }}
+          </div>
+        </div>
+        {% if form_errors(registerForm.lienMarque) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.lienMarque) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Brand link :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.lienMarque) }}
+          </div>
+        </div>
+        {% if form_errors(registerForm.categorie) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.categorie) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Categorie :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.categorie) }}
+          </div>
+        </div>
+        {% if form_errors(registerForm.lienPresentation) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.lienPresentation) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Presentation link :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.lienPresentation) }}
+          </div>
+        </div>
+        {% if form_errors(registerForm.lienAchat) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.lienAchat) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Link to buy:{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.lienAchat) }}
+          </div>
+        </div>
+        {% if form_errors(registerForm.photoMateriel) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.photoMateriel) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Photo of the material :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.photoMateriel) }}
+          </div>
+        </div>
+        <div class="container-bouton text-center btnValidation">
+          <button class="btn shadow-1 rounded-1 outline txt-blue" type="submit">
+            <span class="outline-text">{% trans %}Save{% endtrans %}</span>
+          </button>
+          <button class="btn shadow-1 rounded-1 outline opening txt-blue">
+            <span class="outline-text">
+              <a style="color: black" href="{{ path('accueil') }}">
+                {% trans %}Back{% endtrans %}
+              </a>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    {{ form_end(registerForm) }}
+  </div>
+{% endblock %}

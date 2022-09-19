@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="container-listeLivre">
+    <div class="message">
+      <h5 class="accueilListe">
+        {% trans %}Here is the list of books I have listed.{% endtrans %}
+      </h5>
+      <p class="accueilListe">
+        {% trans %}If you find that there is a shortage, please let me know.{% endtrans
+        %}
+      </p>
+    </div>
+    <div class="container-fluid">
+      <div class="container">
+        {% for message in app.flashes('mercuryseries_flashy_notification') %}
+          <script id="flashy-template" type="text/template">
+            <div class="flashy flashy--{{ message.type }}">
+              <a class="flashy__body" href="#" target="_blank"></a>
+            </div>
+          </script>
+          <script>
+            flashy("{{ message.message }}", "{{ message.link }}");
+          </script>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="container js-filter">
+      <div class="filtre">
+        <div class="col-md-10">
+          <h5>
+            {% trans %}Here is the list of the Illustrator's books :{% endtrans
+            %}
+            <h3 style="text-decoration: underline">
+              {{ illustrateur.prenom }} {{ illustrateur.nomIllustrateur }}
+            </h3>
+          </h5>
+        </div>
+      </div>
+      <div class="grid-livre js-filter-content">
+        {% if livre %}
+          {% for l in livre %}
+            <div class="card js-filter-content">
+              <div class="container-logoIllustrateur">
+                <img style="width: inherit; height: 120px"
+                  src="{{ asset('img/couvertureLivre/') }}{{
+                  l.couvertureLivre
+                  }}"
+                  class="card-img" />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{ l.titreLivre }}
+                </h5>
+                <div class="card-title-illustrateur">
+                  {{ l.illustrateur.prenom }} {{ l.illustrateur }}
+                </div>
+                <h6 class="card-text">
+                  {% trans %}Number of pages :{% endtrans %} {{ l.nbrPages }}
+                </h6>
+                <h6 class="card-presentation">
+                  <embed width="150"
+                    height="120"
+                    src="https://www.youtube.com/embed/{{ l.lienPresentation }}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen />
+                </h6>
+                <h6>
+                  {% trans %}Link to get it :{% endtrans %}
+                </h6>
+                <h6 class="card-text">
+                  <a href="{{ l.lienPourAcheter }}" target="_blank">
+                    <img style="width: 100px; height: 70px"
+                      src="{{ asset('img/logoAmazon.jpg') }}"
+                      alt="logoAmazon" />
+                  </a>
+                </h6>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="card">
+            <h5>
+              {% trans %}No books are registered{% endtrans %}
+            </h5>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

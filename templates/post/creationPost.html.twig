@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="container">
+    {% for message in app.flashes('success') %}
+      <div class="alert alert-success">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="post">
+    {{ form_start(registerForm) }}
+    <div class="container">
+      <h4>
+        {% trans %}New Post :{% endtrans %}
+      </h4>
+      <div class="container">
+        {% if form_errors(registerForm.titreSujet) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.titreSujet) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Post Title :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.titreSujet) }}
+          </div>
+          <br />
+        </div>
+        <h6>
+          {% trans %}Please choose a category for your post :{% endtrans %}
+        </h6>
+
+        <div class="row">
+          <div class="cardCategorie">
+            <div class="grid-categorie">
+              <h6 class="card-title">
+                {% trans %}Materials category{% endtrans %}
+              </h6>
+              <h6 class="card-text" style="text-decoration: underline">
+                {{ form_widget(registerForm.categorieMat) }}
+              </h6>
+            </div>
+          </div>
+          <div class="cardCategorie">
+            <div class="grid-categorie">
+              <h6 class="card-title">
+                {% trans %}Category Books{% endtrans %}
+              </h6>
+              <h6 class="card-text" style="text-decoration: underline">
+                {{ form_widget(registerForm.livre) }}
+              </h6>
+            </div>
+          </div>
+          <div class="cardCategorie">
+            <div class="grid-categorie">
+              <h6 class="card-title">
+                {% trans %}Category Illustrators{% endtrans %}
+              </h6>
+              <h6 class="card-text" style="text-decoration: underline">
+                {{ form_widget(registerForm.illustrateur) }}
+              </h6>
+            </div>
+          </div>
+          <div class="cardCategorie">
+            <div class="grid-categorie">
+              <h6 class="card-title">
+                {% trans %}Other Categories{% endtrans %}
+              </h6>
+              <h6 class="card-text" style="text-decoration: underline">
+                {{ form_widget(registerForm.catePost) }}
+              </h6>
+            </div>
+          </div>
+        </div>
+        {% if form_errors(registerForm.post) %}
+          <div class="row">
+            <div class="col-8-errors">
+              {{ form_errors(registerForm.post) }}
+            </div>
+          </div>
+        {% else %}
+          <br />
+        {% endif %}
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Description :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.post) }}
+          </div>
+          {% if form_errors(registerForm.photoPost) %}
+            <div class="row">
+              <div class="col-8-errors">
+                {{ form_errors(registerForm.photoPost) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label>{% trans %}Photo :{% endtrans %}</label>
+          </div>
+          <div class="col-5">
+            {{ form_widget(registerForm.photoPost) }}
+          </div>
+          <div class="container text-center btnValidation">
+            <button class="btn shadow-1 rounded-1 outline txt-blue"
+              type="submit">
+              <span class="outline-text">{% trans %}Save{% endtrans %}</span>
+            </button>
+            <button class="btn shadow-1 rounded-1 outline opening txt-blue">
+              <span class="outline-text">
+                <a style="color: black" href="{{ path('listePost') }}">
+                  {% trans %}Back{% endtrans %}
+                </a>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ form_end(registerForm) }}
+  </div>
+{% endblock %}

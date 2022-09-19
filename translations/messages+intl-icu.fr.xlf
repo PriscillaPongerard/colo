@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="TmeQk6." resname="The email or the nickname already exist">
+        <source>The email or the nickname already exist</source>
+        <target>L'email ou le pseudo existe déjà</target>
+      </trans-unit>
+      <trans-unit id="x5Pg2aH" resname="Registration">
+        <source>Registration</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="5rex6bg" resname="Nickname :">
+        <source>Nickname :</source>
+        <target>Pseudo :</target>
+      </trans-unit>
+      <trans-unit id=".zaFmJb" resname="First name :">
+        <source>First name :</source>
+        <target>Prénom :</target>
+      </trans-unit>
+      <trans-unit id="j1DPGn4" resname="Name :">
+        <source>Name :</source>
+        <target>Nom :</target>
+      </trans-unit>
+      <trans-unit id="JLff1s." resname="Email :">
+        <source>Email :</source>
+        <target>Email :</target>
+      </trans-unit>
+      <trans-unit id="FaFOD8k" resname="Zip Code :">
+        <source>Zip Code :</source>
+        <target>Code Postal :</target>
+      </trans-unit>
+      <trans-unit id="tM.9tXJ" resname="City :">
+        <source>City :</source>
+        <target>Ville :</target>
+      </trans-unit>
+      <trans-unit id="_bqNTcB" resname="Password :">
+        <source>Password :</source>
+        <target>Mot de Passe :</target>
+      </trans-unit>
+      <trans-unit id="yH.xlWW" resname="Password Confirmation :">
+        <source>Password Confirmation :</source>
+        <target> Confirmation de mot de passe :</target>
+      </trans-unit>
+      <trans-unit id="xXH80vp" resname="Avatar :">
+        <source>Avatar :</source>
+        <target>Avatar :</target>
+      </trans-unit>
+      <trans-unit id="FQn1YfJ" resname="Save">
+        <source>Save</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="dpAPG.0" resname="Back">
+        <source>Back</source>
+        <target>Retour</target>
+      </trans-unit>
+      <trans-unit id="DFwojN." resname="Changing the Profile">
+        <source>Changing the Profile</source>
+        <target>Modification de Profil</target>
+      </trans-unit>
+      <trans-unit id="mRv6AVU" resname="My Profile">
+        <source>My Profile</source>
+        <target>Mon Profil</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id=".GbXqym" resname="Zip code">
+        <source>Zip code</source>
+        <target>Code Postal</target>
+      </trans-unit>
+      <trans-unit id=".DP3Mkb" resname="City">
+        <source>City</source>
+        <target>Ville</target>
+      </trans-unit>
+      <trans-unit id="a3ZKSW2" resname="Registration date">
+        <source>Registration date</source>
+        <target>Date d'inscription</target>
+      </trans-unit>
+      <trans-unit id="wL91vXi" resname="Change">
+        <source>Change</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="W1k4Wr7" resname="Welcome !">
+        <source>Welcome !</source>
+        <target>Bienvenue !</target>
+      </trans-unit>
+      <trans-unit id="PNN6EKC" resname="Welcome to the adult coloring site.">
+        <source>Welcome to the adult coloring site.</source>
+        <target>Bienvenue sur ce site pour le coloriage pour adultes.</target>
+      </trans-unit>
+      <trans-unit id="x9ewZ_a" resname="This site is there to:">
+        <source>This site is there to:</source>
+        <target>Ce site est fait pour :</target>
+      </trans-unit>
+      <trans-unit id="YnX0phu" resname="to share, to help each other, to have fun.">
+        <source>to share, to help each other, to have fun.</source>
+        <target>partager, s'entraider, s'amuser.</target>
+      </trans-unit>
+      <trans-unit id="kjve9bo" resname="Added Illustrator">
+        <source>Added Illustrator</source>
+        <target>Ajout Illustrateur</target>
+      </trans-unit>
+      <trans-unit id="R4rLYv3" resname="Name or Pseudo :">
+        <source>Name or Pseudo :</source>
+        <target>Nom ou Pseudo :</target>
+      </trans-unit>
+      <trans-unit id="w_s.5pM" resname="Firstname :">
+        <source>Firstname :</source>
+        <target>Prénom  :</target>
+      </trans-unit>
+      <trans-unit id="_q_qmYe" resname="Site link :">
+        <source>Site link :</source>
+        <target>Lien des sites :</target>
+      </trans-unit>
+      <trans-unit id="h6r.WWj" resname="FaceBook page link :">
+        <source>FaceBook page link :</source>
+        <target>Lien FaceBook :</target>
+      </trans-unit>
+      <trans-unit id="wkxfXYo" resname="Instagram link :">
+        <source>Instagram link :</source>
+        <target>Lien Instagram :</target>
+      </trans-unit>
+      <trans-unit id="ij3qqlr" resname="Youtube channel :">
+        <source>Youtube channel :</source>
+        <target>Chaine Youtube :</target>
+      </trans-unit>
+      <trans-unit id="sCCG3rR" resname="Logo :">
+        <source>Logo :</source>
+        <target>Logo :</target>
+      </trans-unit>
+      <trans-unit id="kmQ_vGq" resname="Here is the list of illustrators I have listed.">
+        <source>Here is the list of illustrators I have listed.</source>
+        <target>Voici la liste des illustrateurs que j’ai énumérés.</target>
+      </trans-unit>
+      <trans-unit id="X4mXGcW" resname="If you find that there is a shortage, please let me know.">
+        <source>If you find that there is a shortage, please let me know.</source>
+        <target>Si vous constatez qu’il y a un oublie, veuillez me le faire savoir.</target>
+      </trans-unit>
+      <trans-unit id="dkTa1oW" resname="&amp;nbsp; Illustrator's book">
+        <source>&amp;nbsp; Illustrator's book</source>
+        <target> Les livres de L'Illustrateur</target>
+      </trans-unit>
+      <trans-unit id="oU9rGbU" resname="Network links:">
+        <source>Network links:</source>
+        <target>Les liens :</target>
+      </trans-unit>
+      <trans-unit id="GjBp.s7" resname="Added Book">
+        <source>Added Book</source>
+        <target>Ajout de Livre</target>
+      </trans-unit>
+      <trans-unit id="3DPkGHH" resname="Adding Hardware">
+        <source>Adding Hardware</source>
+        <target>Ajout de Matériel</target>
+      </trans-unit>
+      <trans-unit id="YoCb8Td" resname="Illustrator">
+        <source>Illustrator</source>
+        <target>Illustrateur</target>
+      </trans-unit>
+      <trans-unit id="ZZfoQzg" resname="List Illustrators">
+        <source>List Illustrators</source>
+        <target>Liste Illustrateurs</target>
+      </trans-unit>
+      <trans-unit id="a5ToLRX" resname="Details Illustrators">
+        <source>Details Illustrators</source>
+        <target>Détails Illustrateurs</target>
+      </trans-unit>
+      <trans-unit id="naf3a8g" resname="Books">
+        <source>Books</source>
+        <target>Livres</target>
+      </trans-unit>
+      <trans-unit id="tAQVh65" resname="List Books">
+        <source>List Books</source>
+        <target>Liste de livres</target>
+      </trans-unit>
+      <trans-unit id="TVzppfd" resname="Details Books">
+        <source>Details Books</source>
+        <target>Détails des Livres</target>
+      </trans-unit>
+      <trans-unit id="eXUwDwG" resname="Hardware">
+        <source>Hardware</source>
+        <target>Matériel</target>
+      </trans-unit>
+      <trans-unit id=".uZGayR" resname="List Hardware">
+        <source>List Hardware</source>
+        <target>Liste Matériels</target>
+      </trans-unit>
+      <trans-unit id="zaacp25" resname="Details Hardware">
+        <source>Details Hardware</source>
+        <target>Détails du Matériel</target>
+      </trans-unit>
+      <trans-unit id="jGvAmVN" resname="Blog">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="5FUBEKv" resname="List Blog">
+        <source>List Blog</source>
+        <target>Liste des Blog</target>
+      </trans-unit>
+      <trans-unit id="p3Z14XD" resname="Details Blog">
+        <source>Details Blog</source>
+        <target>Détails Blog</target>
+      </trans-unit>
+      <trans-unit id="aqlEk28" resname="Added Blog">
+        <source>Added Blog</source>
+        <target>Ajout Blog</target>
+      </trans-unit>
+      <trans-unit id="1pajW90" resname="Profile">
+        <source>Profile</source>
+        <target>Profil</target>
+      </trans-unit>
+      <trans-unit id="YE3ORF4" resname="Services">
+        <source>Services</source>
+        <target>Services</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="REl5tlo" resname="Legal mentions">
+        <source>Legal mentions</source>
+        <target>Mentions Légales</target>
+      </trans-unit>
+      <trans-unit id="gPeNA6e" resname="Deconnection">
+        <source>Deconnection</source>
+        <target>Deconnexion</target>
+      </trans-unit>
+      <trans-unit id="Y5pA6Cu" resname="Connection">
+        <source>Connection</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Recherche</target>
+      </trans-unit>
+      <trans-unit id="RrMlbUn" resname="Adding a Book">
+        <source>Adding a Book</source>
+        <target>Ajout un livre</target>
+      </trans-unit>
+      <trans-unit id="sg1Nc4R" resname="Book title :">
+        <source>Book title :</source>
+        <target>Titre du Livre :</target>
+      </trans-unit>
+      <trans-unit id="5SdPVcT" resname="Illustrator :">
+        <source>Illustrator :</source>
+        <target>Illustrateur :</target>
+      </trans-unit>
+      <trans-unit id="m6g3Yil" resname="Release date :">
+        <source>Release date :</source>
+        <target>Date de sortie :</target>
+      </trans-unit>
+      <trans-unit id="Hh8jhNC" resname="Page numbers :">
+        <source>Page numbers :</source>
+        <target>Numéro de page :</target>
+      </trans-unit>
+      <trans-unit id="ZgLMojz" resname="Categorie :">
+        <source>Categorie :</source>
+        <target>Catégorie :</target>
+      </trans-unit>
+      <trans-unit id="5t6V2jk" resname="Presentation link :">
+        <source>Presentation link :</source>
+        <target>Lien de Présentation :</target>
+      </trans-unit>
+      <trans-unit id="8UwEvfK" resname="Link to buy:">
+        <source>Link to buy:</source>
+        <target>Lien pour acheter :</target>
+      </trans-unit>
+      <trans-unit id="Z.asDXq" resname="Book cover :">
+        <source>Book cover :</source>
+        <target>Couverture du livre :</target>
+      </trans-unit>
+      <trans-unit id="oODfLGk" resname="Here is the list of books I have listed.">
+        <source>Here is the list of books I have listed.</source>
+        <target>Voici la liste des livres que j’ai énumérés.</target>
+      </trans-unit>
+      <trans-unit id="ho6ywDm" resname="Number of pages">
+        <source>Number of pages</source>
+        <target>Nombre de pages</target>
+      </trans-unit>
+      <trans-unit id="szDWcBt" resname="Category:">
+        <source>Category:</source>
+        <target>Catégorie :</target>
+      </trans-unit>
+      <trans-unit id="TpikoT6" resname="Link to get it:">
+        <source>Link to get it:</source>
+        <target>Lien pour ce procurer :</target>
+      </trans-unit>
+      <trans-unit id="ICXa39O" resname="Here is the list of the Illustrator's books :">
+        <source>Here is the list of the Illustrator's books :</source>
+        <target>Voici la liste des livres de l’illustrateur :</target>
+      </trans-unit>
+      <trans-unit id="7WWIYKv" resname="Number of pages :">
+        <source>Number of pages :</source>
+        <target>Nombre de pages :</target>
+      </trans-unit>
+      <trans-unit id="LPZFXnU" resname="Link to get it :">
+        <source>Link to get it :</source>
+        <target>Lien pour ce procurer : </target>
+      </trans-unit>
+      <trans-unit id="qcPLkmg" resname="No books are registered">
+        <source>No books are registered</source>
+        <target> Aucun livre d'enregistré</target>
+      </trans-unit>
+      <trans-unit id="J7OMoPd" resname="Identifying :">
+        <source>Identifying :</source>
+        <target>Indentifiant :</target>
+      </trans-unit>
+      <trans-unit id="XJUurZO" resname="Add Material :">
+        <source>Add Material :</source>
+        <target>Ajout de Matériel :</target>
+      </trans-unit>
+      <trans-unit id="0K3W0Fw" resname="Name of Material :">
+        <source>Name of Material :</source>
+        <target>Nom de Matériel :</target>
+      </trans-unit>
+      <trans-unit id="5ubtd70" resname="Brand :">
+        <source>Brand :</source>
+        <target>Marque :</target>
+      </trans-unit>
+      <trans-unit id="TEjEgCn" resname="Brand link :">
+        <source>Brand link :</source>
+        <target>Lien de la Marque :</target>
+      </trans-unit>
+      <trans-unit id="dSaf1EX" resname="Photo of the material :">
+        <source>Photo of the material :</source>
+        <target>Photo du Matériel :</target>
+      </trans-unit>
+      <trans-unit id="DrpYjkl" resname="Here is the list of the material I have listed.">
+        <source>Here is the list of the material I have listed.</source>
+        <target>Voici la liste du Matériels que j’ai énumérés.</target>
+      </trans-unit>
+      <trans-unit id="nwg5NxC" resname="Brand website :">
+        <source>Brand website :</source>
+        <target>Site de la Marque :</target>
+      </trans-unit>
+      <trans-unit id="RfjhCVc" resname="New Post :">
+        <source>New Post :</source>
+        <target>Nouveau Post :</target>
+      </trans-unit>
+      <trans-unit id="4nP.1W7" resname="Post Title :">
+        <source>Post Title :</source>
+        <target>Titre du Post :</target>
+      </trans-unit>
+      <trans-unit id="ZwJKZFK" resname="Please choose a category for your post :">
+        <source>Please choose a category for your post :</source>
+        <target>S’il vous plaît choisir une catégorie pour votre Post :</target>
+      </trans-unit>
+      <trans-unit id="CQelpio" resname="Materials category">
+        <source>Materials category</source>
+        <target>Catégorie de Matériel </target>
+      </trans-unit>
+      <trans-unit id="uLPv4m_" resname="Category Books">
+        <source>Category Books</source>
+        <target>Catégorie Livres</target>
+      </trans-unit>
+      <trans-unit id="ruMEbFr" resname="Category Illustrators">
+        <source>Category Illustrators</source>
+        <target>Catégorie Illustrateurs</target>
+      </trans-unit>
+      <trans-unit id="MVISZTx" resname="Other Categories">
+        <source>Other Categories</source>
+        <target>Autres Catégories </target>
+      </trans-unit>
+      <trans-unit id="Lc07R5s" resname="Description :">
+        <source>Description :</source>
+        <target>Description :</target>
+      </trans-unit>
+      <trans-unit id="oS.SU9m" resname="Photo :">
+        <source>Photo :</source>
+        <target>Photo :</target>
+      </trans-unit>
+      <trans-unit id="B2eztXZ" resname="Post creator">
+        <source>Post creator</source>
+        <target>Créateur de Post</target>
+      </trans-unit>
+      <trans-unit id="afoLc6W" resname="Category of the post">
+        <source>Category of the post</source>
+        <target>Catégorie du Post</target>
+      </trans-unit>
+      <trans-unit id="9hEw5dO" resname="Post date">
+        <source>Post date</source>
+        <target>Date du Post</target>
+      </trans-unit>
+      <trans-unit id="RZid5J_" resname="Details">
+        <source>Details</source>
+        <target>Détails</target>
+      </trans-unit>
+      <trans-unit id="BfOEWz." resname="Reply to the post">
+        <source>Reply to the post</source>
+        <target>Répondre au post</target>
+      </trans-unit>
+      <trans-unit id="PQ9Onw5" resname="Back to the list of Posts">
+        <source>Back to the list of Posts</source>
+        <target>Retour à la liste des Post</target>
+      </trans-unit>
+      <trans-unit id="UQmvoRu" resname="Welcome to the Post Space.">
+        <source>Welcome to the Post Space.</source>
+        <target>Bienvenue dans l'espace Post.</target>
+      </trans-unit>
+      <trans-unit id="8VlO_yE" resname="Add a New Topic">
+        <source>Add a New Topic</source>
+        <target>Ajouter un nouveau Post</target>
+      </trans-unit>
+      <trans-unit id="xF3Lfwm" resname="Post title">
+        <source>Post title</source>
+        <target>Titre du Post</target>
+      </trans-unit>
+      <trans-unit id="DgdjSHV" resname="Answer for the post">
+        <source>Answer for the post</source>
+        <target>Répondre au Post</target>
+      </trans-unit>
+      <trans-unit id="UX73sHZ" resname="Write your response for the post here.">
+        <source>Write your response for the post here.</source>
+        <target>Écrivez votre réponse pour le post ici.</target>
+      </trans-unit>
+      <trans-unit id="awLg02O" resname="Added">
+        <source>Added</source>
+        <target> Ajouter</target>
+      </trans-unit>
+      <trans-unit id="ls5uYZO" resname="First Name">
+        <source>First Name</source>
+        <target>Prénom</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

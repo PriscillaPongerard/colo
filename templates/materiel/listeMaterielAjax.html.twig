@@ -1,0 +1,48 @@
+{% for mat in materiel %}
+  <div class="card">
+    <div class="container-logoIllustrateur">
+      <img style="width: inherit; height: 130px"
+        src="{{ asset('img/photoMateriel/') }}{{ mat.photoMateriel }}"
+        class="card-img" />
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ mat.nomMateriel }}
+      </h5>
+      <div class="card-title-materiel">
+        {{ mat.marque }}
+      </div><br />
+      <h6 class="card-text" style="text-decoration: underline">
+        {% trans %}Brand website :{% endtrans %}
+      </h6>
+      <h6 class="card-text">
+        <a href="{{ mat.lienMarque }}" target="_blank">
+          <img style="width: 60px; height: 60px"
+            src="{{ asset('img/lien.site.png') }}"
+            alt="logoSite" />
+        </a>
+      </h6>
+      <h6 class="card-text" style="text-decoration: underline">
+        {% trans %}Categorie :{% endtrans %}
+      </h6>{{ mat.categorie }}
+      <h6 class="card-presentation">
+        <embed width="140"
+          height="110"
+          src="https://www.youtube.com/embed/{{ mat.lienPresentation }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen />
+      </h6>
+      <h6>
+        {% trans %}Link to get it :{% endtrans %}
+      </h6>
+      <h6 class="card-text">
+        <a href="{{ mat.lienAchat }}" target="_blank">
+          <img style="width: 100px; height: 70px"
+            src="{{ asset('img/icons/iconshopping40.png') }}"
+            alt="logoPanier" />
+        </a>
+      </h6>
+    </div>
+  </div>
+{% endfor %}

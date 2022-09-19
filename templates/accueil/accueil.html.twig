@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <header id="headerwrap" class="backstretched no-overlay fullheight">
+    <div class="container">
+      <div class="intro-text vertical-center text-right smoothie">
+        <div class="col-sm-6">
+          <div class="intro-heading wow fadeIn heading-font"
+            data-wow-delay="0.2s">
+            {% trans %}Welcome !{% endtrans %}
+          </div>
+          <div class="intro-sub-heading wow fadeIn secondary-font"
+            data-wow-delay="0.4s">
+            {% trans %}Welcome to the adult coloring site.{% endtrans %} <br />
+            {% trans %}This site is there to:{% endtrans %}<span class="rotate">
+              {% trans %}to share, to help each other, to have fun.{% endtrans
+              %}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}

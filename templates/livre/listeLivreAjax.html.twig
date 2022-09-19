@@ -1,0 +1,45 @@
+{% for liv in livre %}
+  <div class="card js-filter-content" id="result">
+            <div class="container-logoIllustrateur">
+              <img style="width: inherit; height: 150px"
+                src="{{ asset('img/couvertureLivre/') }}{{
+                liv.couvertureLivre
+                }}"
+                class="card-img" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ liv.titreLivre }}
+              </h5>
+              <div class="card-title-illustrateur">
+                 {{ liv.illustrateur.prenom }} {{ liv.illustrateur }}
+              </div>
+              <h6 class="card-text">
+                {% trans %}Number of pages{% endtrans %}{{ liv.nbrPages }}
+              </h6>
+              <h6 class="card-text">
+                {% trans %}Category:{% endtrans %}{{
+                  liv.categorieMateriel.nomCategorie
+                }}
+              </h6>
+              <h6 class="card-presentation">
+                <embed width="150"
+                  height="120"
+                  src="https://www.youtube.com/embed/{{ liv.lienPresentation }}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen />
+              </h6>
+              <h6>
+                {% trans %}Link to get it:{% endtrans %}
+              </h6>
+              <h6 class="card-text">
+                <a href="{{ liv.lienPourAcheter }}" target="_blank">
+                  <img style="width: 100px; height: 70px"
+                    src="{{ asset('img/logoAmazon.jpg') }}"
+                    alt="logoAmazon" />
+                </a>
+              </h6>
+            </div>
+          </div>
+{% endfor %}

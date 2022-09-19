@@ -1,0 +1,174 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <section class="dark-wrapper opaqued parallax"
+    data-parallax="scroll"
+    data-image-src="{{ asset('img/banniere.png') }}"
+    data-speed="0.7">
+    <div class="section-inner pad-top-200">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mt30 wow text-center">
+            <h2 class="section-heading">
+          {% trans %}  Changing the Profile {% endtrans %}  
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="welcome">
+    <div class="section-inner-inscription">
+      {{ form_start(modifProfilForm) }}
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.username) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.username) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Nickname :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.username) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.prenom) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.prenom) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}First name :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.prenom) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.nom) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.nom) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Name :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.nom) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.email) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.email) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Email :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.email) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.codePostal) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.codePostal) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Zip Code :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.codePostal) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.ville) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.ville) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}City :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.ville) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.password.first) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.password.first) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Password :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.password.first) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.password.second) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.password.second) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Password Confirmation :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.password.second) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4">
+          {% if form_errors(modifProfilForm.avatar) %}
+            <div class="row">
+              <div class="col-md-12">
+                {{ form_errors(modifProfilForm.avatar) }}
+              </div>
+            </div>
+          {% else %}
+            <br />
+          {% endif %}
+          <label>{% trans %}Avatar :{% endtrans %}</label>
+          {{ form_widget(modifProfilForm.avatar) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-5">
+          <button type="submit" class="btn btn-primary">
+            {% trans %}Save{% endtrans %}
+          </button>
+          &#160; &#160; &#160; &#160;
+          <button class="btn-primary">
+            <a href="{{ path('accueil') }}">
+              {% trans %}Back{% endtrans %}
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="row-connexion"></div>
+      {{ form_end(modifProfilForm) }}
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,292 @@
+<!-- Navigation -->
+<div id="galerie" class="container">
+
+	<img src="{{ asset('img/image1.jpg') }}" alt"image1" class="active"/>
+	<img src="{{ asset('img/image2.jpg') }}" alt"image2"/>
+	<img src="{{ asset('img/image3.jpg') }}" alt"image3"/>
+
+	<nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
+		<div class="top-bar smoothie hidden-xs">
+			<div class="container">
+				<div class="clearfix">
+					<div class="pull-right text-right">
+						<ul class="list-inline">
+							<li>
+								<div>
+									<i class="fa fa-envelope-o"></i>
+									lateliercolo@gmail.com
+								</div>
+							</li>
+							<li>
+								<div class="langue">
+									{% for locale in locales %}
+										{% if locale != app.request.locale %}
+											<a href="{{ path( 'change_locale', { locale: locale } ) }}">
+												<img style="width: inherit; height: 25px; float:right" src="{{ asset('img/' ~ locale ~ '.png') }}"/>
+											</a>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand smoothie logo logo-light" href="{{ path('accueil') }}">
+					<img src="{{ asset('img/logon.png') }} " alt="logo"/>
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="main-navigation">
+				<ul class="nav navbar-nav navbar-right">
+					{% if app.user and app.user.administrateur %}
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								{% trans %}
+								Added
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-submenu">
+									<a href="{{ path('ajoutIllustrateur') }}" class="dropdown-toggle" data-toggle="dropdown">
+										{% trans %}
+										Added Illustrator
+										{% endtrans %}
+									</a>
+								</li>
+								<li class="dropdown-submenu">
+									<a href="{{ path('ajoutLivre') }}" class="dropdown-toggle" data-toggle="dropdown">
+										{% trans %}
+										Added Book
+										{% endtrans %}
+									</a>
+								</li>
+								<li class="dropdown-submenu">
+									<a href="{{ path('ajoutMateriel') }}" class="dropdown-toggle" data-toggle="dropdown">
+										{% trans %}
+										Adding Hardware
+										{%  endtrans %}
+									</a>
+								</li>
+							</ul>
+						</li>
+					{% endif %}
+					{% if app.user and app.user %}
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+								{% trans %}
+								Illustrator
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="{{ path('listeIllustrateur') }}">
+										{% trans %}
+										List Illustrators
+										{% endtrans %}
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										{% trans %}
+										Details Illustrators
+										{% endtrans %}
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+								{% trans %}
+								Books
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="{{ path('listeLivre') }}">
+										{% trans %}
+										List Books
+										{% endtrans %}
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										{% trans %}
+										Details Books{% endtrans %}
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								{% trans %}
+								Hardware
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="{{ path('listeMateriel') }}">
+										{% trans %}
+										List Hardware
+										{% endtrans %}
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										{% trans %}
+										Details Hardware
+										{% endtrans %}
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								{% trans %}
+								Blog
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="{{ path('listePost') }}">
+										{% trans %}
+										List Blog
+										{% endtrans %}
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										{% trans %}
+										Details Blog
+										{% endtrans %}
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										{% trans %}
+										Added Blog
+										{% endtrans %}
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								{% trans %}
+								Profile
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="{{ path('monProfil') }}">
+										{% trans %}
+										My Profile
+										{% endtrans %}
+									</a>
+								</li>
+								{# <li><a href="#">Modifier Profil</a></li>
+							   <li><a href="#">Supprimer Profil</a></li> #}
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								{% trans %}
+								Services
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">
+										{% trans %}
+										Contact
+										{% endtrans %}
+									</a>
+								</li>
+								<li>
+									<a href="#">{% trans %}
+										Legal mentions
+										{% endtrans %}</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#search">
+								<i class="pe-7s-search"></i>
+							</a>
+						</li>
+					{% endif %}
+					{% if app.user %}
+						<li class="dropdown">
+							<a href="{{ path('logout') }}" class="dropdown-toggle" data-toggle="dropdown">
+								{% trans %}
+								Deconnection
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="{{ path('logout') }}">{% trans %}
+										Deconnection
+										{% endtrans %}</a>
+								</li>
+							</ul>
+						</li>
+					{% else %}
+						<li class="dropdown">
+							<a href="{{ path('inscription') }}">
+								{% trans %}
+								Registration
+								{% endtrans %}
+								<span class="pe-7s-angle-down"></span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="{{ path('login') }}">
+								{% trans %}
+								Connection
+								{% endtrans %}<span class="pe-7s-angle-down"></span>
+							</a>
+						</li>
+					{% endif %}
+					<li>
+						<a href="javascript:void(0);" class="side-menu-trigger hidden-xs">
+							<i class="fa fa-bars"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div id="search-wrapper">
+		<button type="button" class="close">×</button>
+		<div class="vertical-center text-center">
+			<form>
+				<input type="search" value="" placeholder="Enter Search Term"/>
+				<button type="submit" class="btn btn-primary btn-white">{% trans %}
+					Search
+					{% endtrans %}</button>
+			</form>
+		</div>
+	</div>
+</div>
